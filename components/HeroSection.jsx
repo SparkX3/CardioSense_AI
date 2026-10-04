@@ -57,8 +57,8 @@ export default function HeroSection({ onStartAssessment, onConsultSpecialists })
               transition={{ duration: 0.9, delay: 0.1 }}
               className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-normal tracking-tight text-[#1C3326] leading-[0.94]"
             >
-              Turning science <br />
-              <span className="italic font-light">into medicine.</span>
+              Predicting risk <br />
+              <span className="italic font-light">before it matters.</span>
             </motion.h1>
 
             {/* Assessment CTA Buttons */}

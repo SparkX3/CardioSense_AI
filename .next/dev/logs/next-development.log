@@ -1,16 +1,4 @@
-{"timestamp":"00:00:10.614","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:33.482","source":"Server","level":"LOG","message":"○ Compiling / ..."}
-{"timestamp":"00:00:40.544","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:04:35.677","source":"Server","level":"WARN","message":"⚠ Blocked cross-origin request to Next.js dev resource /_next/hmr from \"172.20.10.4\".\nCross-origin access to Next.js dev resources is blocked by default for safety.\n\nTo allow this host in development, add it to \"allowedDevOrigins\" in next.config.js and restart the dev server:\n\n// next.config.js\nmodule.exports = {\n  allowedDevOrigins: ['172.20.10.4'],\n}\n\nRead more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins"}
-{"timestamp":"00:05:47.451","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:24:00.529","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:24:03.267","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:24:18.037","source":"Server","level":"LOG","message":"✓ Compiled in 258ms"}
-{"timestamp":"00:26:50.986","source":"Server","level":"ERROR","message":"(node:27644) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)"}
-{"timestamp":"00:32:54.272","source":"Server","level":"LOG","message":"✓ Compiled in 153ms"}
-{"timestamp":"00:33:15.650","source":"Server","level":"LOG","message":"✓ Compiled in 235ms"}
-{"timestamp":"00:33:42.960","source":"Server","level":"LOG","message":"✓ Compiled in 101ms"}
-{"timestamp":"00:34:38.664","source":"Server","level":"LOG","message":"✓ Compiled in 76ms"}
-{"timestamp":"00:48:06.509","source":"Server","level":"LOG","message":"✓ Compiled in 257ms"}
-{"timestamp":"00:48:27.111","source":"Server","level":"LOG","message":"✓ Compiled in 137ms"}
-{"timestamp":"00:48:39.259","source":"Server","level":"LOG","message":"✓ Compiled in 84ms"}
+{"timestamp":"00:00:52.235","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:01:02.169","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:01:19.666","source":"Server","level":"ERROR","message":"(node:17892) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)"}
+{"timestamp":"00:08:48.382","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}

@@ -17,34 +17,34 @@ import {
 
 const PRESETS = {
   low: {
-    label: 'Low Risk Profile',
+    label: 'Low Risk Profile (< 25% Risk)',
     data: {
-      age: 38,
+      age: 36,
       sex: 0,
       cp: 2,
-      trestbps: 114,
-      chol: 182,
+      trestbps: 118,
+      chol: 185,
       fbs: 0,
       restecg: 0,
-      thalach: 172,
+      thalach: 174,
       exang: 0,
       oldpeak: 0.2,
-      slope: 2,
+      slope: 0,
       ca: 0,
       thal: 2,
     }
   },
   moderate: {
-    label: 'Moderate Risk Profile',
+    label: 'Moderate Risk Profile (35% - 64% Risk)',
     data: {
       age: 52,
       sex: 1,
       cp: 1,
-      trestbps: 134,
-      chol: 238,
+      trestbps: 135,
+      chol: 235,
       fbs: 0,
       restecg: 1,
-      thalach: 148,
+      thalach: 142,
       exang: 0,
       oldpeak: 1.2,
       slope: 1,
@@ -53,18 +53,18 @@ const PRESETS = {
     }
   },
   high: {
-    label: 'High Risk Profile',
+    label: 'High Risk Profile (> 75% Risk)',
     data: {
-      age: 63,
+      age: 64,
       sex: 1,
       cp: 0,
-      trestbps: 162,
-      chol: 298,
+      trestbps: 160,
+      chol: 285,
       fbs: 1,
-      restecg: 1,
-      thalach: 122,
+      restecg: 2,
+      thalach: 108,
       exang: 1,
-      oldpeak: 2.8,
+      oldpeak: 3.2,
       slope: 1,
       ca: 2,
       thal: 3,
@@ -634,6 +634,58 @@ export default function SurveySection({ onAnalysisComplete, showToast }) {
                     <span>0.0 mm (Baseline)</span>
                     <span>3.0 mm</span>
                     <span>6.2 mm</span>
+                  </div>
+                </div>
+
+                {/* ST Slope */}
+                <div className="mb-6">
+                  <label className="block text-xs font-semibold text-[#1C3326] mb-2">
+                    Peak Exercise ST Slope
+                  </label>
+                  <div className="grid grid-cols-3 gap-2">
+                    {[
+                      { val: 0, label: '0: Upsloping' },
+                      { val: 1, label: '1: Flat' },
+                      { val: 2, label: '2: Downsloping' },
+                    ].map((item) => (
+                      <button
+                        key={item.val}
+                        type="button"
+                        onClick={() => updateField('slope', item.val)}
+                        className={`py-2 px-2 rounded-xl text-xs font-medium border text-center transition-all ${
+                          formData.slope === item.val
+                            ? 'bg-[#1C3326] text-[#ECE8E1] border-[#1C3326] font-semibold shadow-sm'
+                            : 'bg-transparent border-[#1C3326]/10 text-[#4E5C52] hover:border-[#1C3326]/20'
+                        }`}
+                        id={`slope-opt-${item.val}`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Major Vessels Colored (Fluoroscopy, ca) */}
+                <div className="mb-6">
+                  <label className="block text-xs font-semibold text-[#1C3326] mb-2">
+                    Major Vessels Colored (Fluoroscopy: 0–3)
+                  </label>
+                  <div className="grid grid-cols-4 gap-2">
+                    {[0, 1, 2, 3].map((vesselCount) => (
+                      <button
+                        key={vesselCount}
+                        type="button"
+                        onClick={() => updateField('ca', vesselCount)}
+                        className={`py-2 px-2 rounded-xl text-xs font-medium border text-center transition-all ${
+                          formData.ca === vesselCount
+                            ? 'bg-[#1C3326] text-[#ECE8E1] border-[#1C3326] font-semibold shadow-sm'
+                            : 'bg-transparent border-[#1C3326]/10 text-[#4E5C52] hover:border-[#1C3326]/20'
+                        }`}
+                        id={`ca-opt-${vesselCount}`}
+                      >
+                        {vesselCount} {vesselCount === 1 ? 'Vessel' : 'Vessels'}
+                      </button>
+                    ))}
                   </div>
                 </div>
 

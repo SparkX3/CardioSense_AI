@@ -94,10 +94,10 @@ export default function RadialGauge({ score = 0, riskTier = 'LOW' }) {
       </div>
 
       {/* Subtle scale thresholds */}
-      <div className="flex justify-between w-52 text-[10px] font-mono text-[#78827A] mt-[-6px]">
-        <span>0% (Low)</span>
-        <span>35%</span>
-        <span>65%+ (High)</span>
+      <div className="flex justify-between w-56 text-[10px] font-mono text-[#78827A] mt-[-6px]">
+        <span>&lt;35% (Low)</span>
+        <span>35%–64% (Mod)</span>
+        <span>&ge;65% (High)</span>
       </div>
     </div>
   );

@@ -283,7 +283,7 @@ function AppointmentModal({ isOpen, onClose, doctor, initialNotes, showToast, on
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                 src: doctor.image,
                                                 alt: doctor.name,
-                                                className: "w-full h-full object-cover filter grayscale contrast-110"
+                                                className: "w-full h-full object-cover object-top"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/AppointmentModal.jsx",
                                                 lineNumber: 125,
@@ -306,7 +306,7 @@ function AppointmentModal({ isOpen, onClose, doctor, initialNotes, showToast, on
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-xs font-semibold text-[#1C3326]",
-                                                    children: doctor.specialty
+                                                    children: doctor.role || doctor.specialty
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/AppointmentModal.jsx",
                                                     lineNumber: 136,
@@ -322,7 +322,7 @@ function AppointmentModal({ isOpen, onClose, doctor, initialNotes, showToast, on
                                                             lineNumber: 138,
                                                             columnNumber: 19
                                                         }, this),
-                                                        doctor.hospital
+                                                        doctor.institution || doctor.hospital
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/AppointmentModal.jsx",
@@ -1808,7 +1808,7 @@ function HeroSection({ onStartAssessment, onConsultSpecialists }) {
                                     },
                                     className: "font-serif text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-normal tracking-tight text-[#1C3326] leading-[0.94]",
                                     children: [
-                                        "Turning science ",
+                                        "Predicting risk ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/components/HeroSection.jsx",
                                             lineNumber: 60,
@@ -1816,7 +1816,7 @@ function HeroSection({ onStartAssessment, onConsultSpecialists }) {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "italic font-light",
-                                            children: "into medicine."
+                                            children: "before it matters."
                                         }, void 0, false, {
                                             fileName: "[project]/components/HeroSection.jsx",
                                             lineNumber: 61,
@@ -2438,24 +2438,24 @@ function RadialGauge({ score = 0, riskTier = 'LOW' }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-between w-52 text-[10px] font-mono text-[#78827A] mt-[-6px]",
+                className: "flex justify-between w-56 text-[10px] font-mono text-[#78827A] mt-[-6px]",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        children: "0% (Low)"
+                        children: "<35% (Low)"
                     }, void 0, false, {
                         fileName: "[project]/components/RadialGauge.jsx",
                         lineNumber: 98,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        children: "35%"
+                        children: "35%–64% (Mod)"
                     }, void 0, false, {
                         fileName: "[project]/components/RadialGauge.jsx",
                         lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        children: "65%+ (High)"
+                        children: "≥65% (High)"
                     }, void 0, false, {
                         fileName: "[project]/components/RadialGauge.jsx",
                         lineNumber: 100,
@@ -2498,52 +2498,64 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AppointmentMod
 ;
 const SPECIALISTS = [
     {
-        id: 'doc-1',
-        name: 'Dr. Evelyn Vance',
-        credentials: 'MD, FACC',
-        specialty: 'Interventional Cardiology Lead',
-        subspecialty: 'Coronary Angioplasty & Acute Ischemia',
-        hospital: 'Stanford Cardiovascular Institute',
-        experience: '18+ Years Experience',
+        id: 'spec-1',
+        name: 'Atharva Bane',
+        role: 'Lead Research & Diagnostics Specialist',
+        specialty: 'Lead Research & Diagnostics Specialist',
+        qualification: 'B.E. Computer Engineering | Clinical AI Research',
+        credentials: 'B.E. Computer Engineering',
+        subspecialty: 'Clinical AI Research & Biomarker Diagnostics',
+        institution: 'Lokmanya Tilak College of Engineering',
+        hospital: 'Lokmanya Tilak College of Engineering',
+        experience: 'Diagnostics & AI Specialist',
         rating: 4.9,
         nextSlot: 'Today, 3:30 PM',
-        image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400'
+        image: '/images/atharva_bane.jpg'
     },
     {
-        id: 'doc-2',
-        name: 'Dr. Marcus Sterling',
-        credentials: 'MD, FSCAI',
-        specialty: 'Cardiac Electrophysiology',
-        subspecialty: 'Arrhythmia Management & Holter Review',
-        hospital: 'Cleveland Clinic Heart Center',
-        experience: '15+ Years Experience',
+        id: 'spec-2',
+        name: 'Bhakti Bhoir',
+        role: 'Clinical Informatics & Data Systems',
+        specialty: 'Clinical Informatics & Data Systems',
+        qualification: 'B.E. Computer Engineering | Health Informatics',
+        credentials: 'B.E. Computer Engineering',
+        subspecialty: 'Health Informatics & Clinical Data Architecture',
+        institution: 'Lokmanya Tilak College of Engineering',
+        hospital: 'Lokmanya Tilak College of Engineering',
+        experience: 'Clinical Systems Specialist',
         rating: 4.9,
         nextSlot: 'Tomorrow, 10:00 AM',
-        image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400'
+        image: '/images/bhakti_bhoir.jpg'
     },
     {
-        id: 'doc-3',
-        name: 'Dr. Priya Nair',
-        credentials: 'MD, MPH',
-        specialty: 'Preventative Cardiology & Lipids',
-        subspecialty: 'Arteriosclerosis & Metabolic Syndrome',
-        hospital: 'Johns Hopkins Medicine',
-        experience: '12+ Years Experience',
+        id: 'spec-3',
+        name: 'Bhumika Jadhav',
+        role: 'Healthcare AI Solutions Specialist',
+        specialty: 'Healthcare AI Solutions Specialist',
+        qualification: 'B.E. Computer Engineering | Predictive Modeling',
+        credentials: 'B.E. Computer Engineering',
+        subspecialty: 'Predictive Modeling & Statistical Inference',
+        institution: 'Lokmanya Tilak College of Engineering',
+        hospital: 'Lokmanya Tilak College of Engineering',
+        experience: 'Healthcare AI Specialist',
         rating: 4.8,
         nextSlot: 'Today, 5:15 PM',
-        image: 'https://images.unsplash.com/photo-1594824813633-89da26d40047?auto=format&fit=crop&q=80&w=400'
+        image: '/images/bhumika_jadhav.jpg'
     },
     {
-        id: 'doc-4',
-        name: 'Dr. Julian Chen',
-        credentials: 'MD, PhD',
-        specialty: 'Structural Heart & Valve Specialist',
-        subspecialty: 'Echocardiography & TAVR Protocols',
-        hospital: 'Massachusetts General Hospital',
-        experience: '20+ Years Experience',
+        id: 'spec-4',
+        name: 'Sanchit Shingole',
+        role: 'Principal AI Architect & Project Lead',
+        specialty: 'Principal AI Architect & Project Lead',
+        qualification: 'B.E. Computer Engineering | ML Systems Engineering',
+        credentials: 'B.E. Computer Engineering',
+        subspecialty: 'ML Systems Engineering & Pipeline Architecture',
+        institution: 'Lokmanya Tilak College of Engineering',
+        hospital: 'Lokmanya Tilak College of Engineering',
+        experience: 'Project Lead & AI Architect',
         rating: 5.0,
         nextSlot: 'Thursday, 11:30 AM',
-        image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=400'
+        image: '/images/sanchit_shingole.jpg'
     }
 ];
 function SpecialistsSection({ latestVerdict, showToast }) {
@@ -2553,12 +2565,12 @@ function SpecialistsSection({ latestVerdict, showToast }) {
         setSelectedDoctor(doc);
         setModalOpen(true);
     };
-    const initialNotes = latestVerdict ? `CardioSense Screening Dossier: ${latestVerdict.probability}% calculated probability (${latestVerdict.risk_tier} RISK)` : 'Routine Cardiovascular Consultation & Review';
+    const initialNotes = latestVerdict ? `CardioSense Screening Dossier: ${latestVerdict.probability}% calculated probability (${latestVerdict.risk_tier} RISK)` : 'CardioSense AI Health Consultation & Screening Review';
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "specialists",
         className: "relative min-h-screen py-28 px-6 sm:px-10 lg:px-16 bg-[#E6E1D8] text-[#1C3326] border-t border-[#1C3326]/10",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "max-w-6xl mx-auto",
+            className: "max-w-7xl mx-auto",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                     initial: {
@@ -2580,36 +2592,36 @@ function SpecialistsSection({ latestVerdict, showToast }) {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "text-[11px] font-mono tracking-widest uppercase text-[#556358] block mb-2",
-                            children: "Section 04 / Clinical Network"
+                            children: "Section 04 / Clinical Intelligence Team"
                         }, void 0, false, {
                             fileName: "[project]/components/SpecialistsSection.jsx",
-                            lineNumber: 93,
+                            lineNumber: 105,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             className: "font-serif text-4xl sm:text-5xl font-normal text-[#1C3326] tracking-tight",
-                            children: "Cardiologist Directory & Direct Consultation"
+                            children: "Specialist Directory & Direct Consultation"
                         }, void 0, false, {
                             fileName: "[project]/components/SpecialistsSection.jsx",
-                            lineNumber: 96,
+                            lineNumber: 108,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "mt-3 text-[#4E5C52] text-sm sm:text-base leading-relaxed font-normal",
-                            children: "Directly connect with accredited specialists for in-person evaluations, secondary opinions, and comprehensive cardiovascular protocols."
+                            children: "Directly connect with our project specialists for cardiovascular AI evaluations, secondary insights, and machine-learning driven clinical consultation."
                         }, void 0, false, {
                             fileName: "[project]/components/SpecialistsSection.jsx",
-                            lineNumber: 99,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/SpecialistsSection.jsx",
-                    lineNumber: 86,
+                    lineNumber: 98,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
+                    className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6",
                     children: SPECIALISTS.map((doc, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                             initial: {
                                 opacity: 0,
@@ -2632,23 +2644,23 @@ function SpecialistsSection({ latestVerdict, showToast }) {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "relative w-full h-52 rounded-2xl overflow-hidden mb-4 bg-[#ECE8E1] border border-[#1C3326]/10",
+                                            className: "relative w-full h-64 rounded-2xl overflow-hidden mb-4 bg-[#ECE8E1] border border-[#1C3326]/10 shadow-inner",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                     src: doc.image,
                                                     alt: doc.name,
-                                                    className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter grayscale contrast-110",
+                                                    className: "w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500",
                                                     loading: "lazy"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                    lineNumber: 119,
+                                                    lineNumber: 131,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute inset-0 bg-gradient-to-t from-[#1C3326]/60 via-transparent to-transparent opacity-60"
+                                                    className: "absolute inset-0 bg-gradient-to-t from-[#1C3326]/70 via-[#1C3326]/10 to-transparent opacity-60"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                    lineNumber: 125,
+                                                    lineNumber: 137,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2661,14 +2673,14 @@ function SpecialistsSection({ latestVerdict, showToast }) {
                                                                     className: "w-3 h-3 text-[#556358]"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                                    lineNumber: 130,
+                                                                    lineNumber: 142,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 doc.nextSlot
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/SpecialistsSection.jsx",
-                                                            lineNumber: 129,
+                                                            lineNumber: 141,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2678,89 +2690,59 @@ function SpecialistsSection({ latestVerdict, showToast }) {
                                                                     className: "w-3 h-3 fill-[#A6822B] text-[#A6822B]"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                                    lineNumber: 135,
+                                                                    lineNumber: 147,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 doc.rating
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/SpecialistsSection.jsx",
-                                                            lineNumber: 134,
+                                                            lineNumber: 146,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                    lineNumber: 128,
+                                                    lineNumber: 140,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/SpecialistsSection.jsx",
-                                            lineNumber: 118,
+                                            lineNumber: 130,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "space-y-1 mb-3",
+                                            className: "space-y-1.5 mb-3",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                     className: "font-serif text-xl font-medium text-[#1C3326]",
                                                     children: doc.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                    lineNumber: 143,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex items-center gap-2 text-[11px] font-mono text-[#556358]",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            children: doc.credentials
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/components/SpecialistsSection.jsx",
-                                                            lineNumber: 147,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            children: "•"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/components/SpecialistsSection.jsx",
-                                                            lineNumber: 148,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            children: doc.experience
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/components/SpecialistsSection.jsx",
-                                                            lineNumber: 149,
-                                                            columnNumber: 21
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/components/SpecialistsSection.jsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 155,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-xs font-semibold text-[#1C3326] pt-1",
-                                                    children: doc.specialty
+                                                    className: "text-xs font-semibold text-[#1C3326] leading-snug",
+                                                    children: doc.role
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                    lineNumber: 151,
+                                                    lineNumber: 158,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-[11px] text-[#556358] leading-snug",
-                                                    children: doc.subspecialty
+                                                    className: "text-[11px] font-mono text-[#556358] leading-tight",
+                                                    children: doc.qualification
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                    lineNumber: 154,
+                                                    lineNumber: 161,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/SpecialistsSection.jsx",
-                                            lineNumber: 142,
+                                            lineNumber: 154,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2770,27 +2752,27 @@ function SpecialistsSection({ latestVerdict, showToast }) {
                                                     className: "w-3.5 h-3.5 text-[#78827A] shrink-0"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                    lineNumber: 161,
+                                                    lineNumber: 168,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "truncate",
-                                                    children: doc.hospital
+                                                    children: doc.institution
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                                    lineNumber: 162,
+                                                    lineNumber: 169,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/SpecialistsSection.jsx",
-                                            lineNumber: 160,
+                                            lineNumber: 167,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                    lineNumber: 116,
+                                    lineNumber: 128,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2802,31 +2784,31 @@ function SpecialistsSection({ latestVerdict, showToast }) {
                                             className: "w-3.5 h-3.5"
                                         }, void 0, false, {
                                             fileName: "[project]/components/SpecialistsSection.jsx",
-                                            lineNumber: 172,
+                                            lineNumber: 179,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: "Book Appointment"
+                                            children: "Book Consultation"
                                         }, void 0, false, {
                                             fileName: "[project]/components/SpecialistsSection.jsx",
-                                            lineNumber: 173,
+                                            lineNumber: 180,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/SpecialistsSection.jsx",
-                                    lineNumber: 167,
+                                    lineNumber: 174,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, doc.id, true, {
                             fileName: "[project]/components/SpecialistsSection.jsx",
-                            lineNumber: 108,
+                            lineNumber: 120,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/SpecialistsSection.jsx",
-                    lineNumber: 106,
+                    lineNumber: 118,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AppointmentModal$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2837,18 +2819,18 @@ function SpecialistsSection({ latestVerdict, showToast }) {
                     showToast: showToast
                 }, void 0, false, {
                     fileName: "[project]/components/SpecialistsSection.jsx",
-                    lineNumber: 180,
+                    lineNumber: 187,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/SpecialistsSection.jsx",
-            lineNumber: 84,
+            lineNumber: 96,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/SpecialistsSection.jsx",
-        lineNumber: 80,
+        lineNumber: 92,
         columnNumber: 5
     }, this);
 }
@@ -2874,34 +2856,34 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 const PRESETS = {
     low: {
-        label: 'Low Risk Profile',
+        label: 'Low Risk Profile (< 25% Risk)',
         data: {
-            age: 38,
+            age: 36,
             sex: 0,
             cp: 2,
-            trestbps: 114,
-            chol: 182,
+            trestbps: 118,
+            chol: 185,
             fbs: 0,
             restecg: 0,
-            thalach: 172,
+            thalach: 174,
             exang: 0,
             oldpeak: 0.2,
-            slope: 2,
+            slope: 0,
             ca: 0,
             thal: 2
         }
     },
     moderate: {
-        label: 'Moderate Risk Profile',
+        label: 'Moderate Risk Profile (35% - 64% Risk)',
         data: {
             age: 52,
             sex: 1,
             cp: 1,
-            trestbps: 134,
-            chol: 238,
+            trestbps: 135,
+            chol: 235,
             fbs: 0,
             restecg: 1,
-            thalach: 148,
+            thalach: 142,
             exang: 0,
             oldpeak: 1.2,
             slope: 1,
@@ -2910,18 +2892,18 @@ const PRESETS = {
         }
     },
     high: {
-        label: 'High Risk Profile',
+        label: 'High Risk Profile (> 75% Risk)',
         data: {
-            age: 63,
+            age: 64,
             sex: 1,
             cp: 0,
-            trestbps: 162,
-            chol: 298,
+            trestbps: 160,
+            chol: 285,
             fbs: 1,
-            restecg: 1,
-            thalach: 122,
+            restecg: 2,
+            thalach: 108,
             exang: 1,
-            oldpeak: 2.8,
+            oldpeak: 3.2,
             slope: 1,
             ca: 2,
             thal: 3
@@ -4167,6 +4149,98 @@ function SurveySection({ onAnalysisComplete, showToast }) {
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "mb-6",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "block text-xs font-semibold text-[#1C3326] mb-2",
+                                                        children: "Peak Exercise ST Slope"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/SurveySection.jsx",
+                                                        lineNumber: 642,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "grid grid-cols-3 gap-2",
+                                                        children: [
+                                                            {
+                                                                val: 0,
+                                                                label: '0: Upsloping'
+                                                            },
+                                                            {
+                                                                val: 1,
+                                                                label: '1: Flat'
+                                                            },
+                                                            {
+                                                                val: 2,
+                                                                label: '2: Downsloping'
+                                                            }
+                                                        ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                type: "button",
+                                                                onClick: ()=>updateField('slope', item.val),
+                                                                className: `py-2 px-2 rounded-xl text-xs font-medium border text-center transition-all ${formData.slope === item.val ? 'bg-[#1C3326] text-[#ECE8E1] border-[#1C3326] font-semibold shadow-sm' : 'bg-transparent border-[#1C3326]/10 text-[#4E5C52] hover:border-[#1C3326]/20'}`,
+                                                                id: `slope-opt-${item.val}`,
+                                                                children: item.label
+                                                            }, item.val, false, {
+                                                                fileName: "[project]/components/SurveySection.jsx",
+                                                                lineNumber: 651,
+                                                                columnNumber: 23
+                                                            }, this))
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/SurveySection.jsx",
+                                                        lineNumber: 645,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/SurveySection.jsx",
+                                                lineNumber: 641,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "mb-6",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "block text-xs font-semibold text-[#1C3326] mb-2",
+                                                        children: "Major Vessels Colored (Fluoroscopy: 0–3)"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/SurveySection.jsx",
+                                                        lineNumber: 670,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "grid grid-cols-4 gap-2",
+                                                        children: [
+                                                            0,
+                                                            1,
+                                                            2,
+                                                            3
+                                                        ].map((vesselCount)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                type: "button",
+                                                                onClick: ()=>updateField('ca', vesselCount),
+                                                                className: `py-2 px-2 rounded-xl text-xs font-medium border text-center transition-all ${formData.ca === vesselCount ? 'bg-[#1C3326] text-[#ECE8E1] border-[#1C3326] font-semibold shadow-sm' : 'bg-transparent border-[#1C3326]/10 text-[#4E5C52] hover:border-[#1C3326]/20'}`,
+                                                                id: `ca-opt-${vesselCount}`,
+                                                                children: [
+                                                                    vesselCount,
+                                                                    " ",
+                                                                    vesselCount === 1 ? 'Vessel' : 'Vessels'
+                                                                ]
+                                                            }, vesselCount, true, {
+                                                                fileName: "[project]/components/SurveySection.jsx",
+                                                                lineNumber: 675,
+                                                                columnNumber: 23
+                                                            }, this))
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/SurveySection.jsx",
+                                                        lineNumber: 673,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/SurveySection.jsx",
+                                                lineNumber: 669,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "mb-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -4174,7 +4248,7 @@ function SurveySection({ onAnalysisComplete, showToast }) {
                                                         children: "Thalassemia Scan Status"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/SurveySection.jsx",
-                                                        lineNumber: 642,
+                                                        lineNumber: 694,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4200,18 +4274,18 @@ function SurveySection({ onAnalysisComplete, showToast }) {
                                                                 children: item.label
                                                             }, item.val, false, {
                                                                 fileName: "[project]/components/SurveySection.jsx",
-                                                                lineNumber: 651,
+                                                                lineNumber: 703,
                                                                 columnNumber: 23
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/SurveySection.jsx",
-                                                        lineNumber: 645,
+                                                        lineNumber: 697,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/SurveySection.jsx",
-                                                lineNumber: 641,
+                                                lineNumber: 693,
                                                 columnNumber: 17
                                             }, this)
                                         ]
@@ -4256,7 +4330,7 @@ function SurveySection({ onAnalysisComplete, showToast }) {
                                             children: "Scientific Validation & SQLite Persistence"
                                         }, void 0, false, {
                                             fileName: "[project]/components/SurveySection.jsx",
-                                            lineNumber: 680,
+                                            lineNumber: 732,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4264,13 +4338,13 @@ function SurveySection({ onAnalysisComplete, showToast }) {
                                             children: "Instantaneous evaluation across 100 decision trees with timestamped audit trail."
                                         }, void 0, false, {
                                             fileName: "[project]/components/SurveySection.jsx",
-                                            lineNumber: 683,
+                                            lineNumber: 735,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/SurveySection.jsx",
-                                    lineNumber: 679,
+                                    lineNumber: 731,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4284,20 +4358,20 @@ function SurveySection({ onAnalysisComplete, showToast }) {
                                                 className: "w-4 h-4 animate-spin text-[#ECE8E1]"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/SurveySection.jsx",
-                                                lineNumber: 700,
+                                                lineNumber: 752,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Processing Dossier..."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/SurveySection.jsx",
-                                                lineNumber: 701,
+                                                lineNumber: 753,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/SurveySection.jsx",
-                                        lineNumber: 699,
+                                        lineNumber: 751,
                                         columnNumber: 17
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                         children: [
@@ -4305,31 +4379,31 @@ function SurveySection({ onAnalysisComplete, showToast }) {
                                                 children: "Analyze Health Profile"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/SurveySection.jsx",
-                                                lineNumber: 705,
+                                                lineNumber: 757,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                                 className: "w-3.5 h-3.5"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/SurveySection.jsx",
-                                                lineNumber: 706,
+                                                lineNumber: 758,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/SurveySection.jsx",
-                                        lineNumber: 704,
+                                        lineNumber: 756,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/SurveySection.jsx",
-                                    lineNumber: 688,
+                                    lineNumber: 740,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/SurveySection.jsx",
-                            lineNumber: 672,
+                            lineNumber: 724,
                             columnNumber: 11
                         }, this)
                     ]

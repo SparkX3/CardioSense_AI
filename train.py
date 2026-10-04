@@ -21,6 +21,12 @@ df = pd.read_csv(DATA_PATH)
 if "output" in df.columns:
     df = df.rename(columns={"output": "target"})
 
+# In the raw Cleveland dataset, target 0 represented severe disease presence (high ST depression,
+# severe angina, blocked vessels), while target 1 represented absence of disease.
+# Invert target so 1 = disease present (High Risk) and 0 = healthy / no disease (Low Risk).
+# This guarantees model.predict_proba(X)[:, 1] * 100 directly reflects cardiovascular risk probability.
+df["target"] = 1 - df["target"]
+
 # 2. Separate Features (X) and Target (y)
 X = df.drop(columns=["target"])
 y = df["target"]
@@ -41,14 +47,13 @@ X_train_scaled[continuous_features] = scaler.fit_transform(X_train[continuous_fe
 X_test_scaled[continuous_features] = scaler.transform(X_test[continuous_features])
 
 # 5. Benchmark Models
-models = {
-    "Logistic Regression": LogisticRegression(random_state=42),
-    "Random Forest": RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42)
-}
+rf_model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42)
+lr_model = LogisticRegression(random_state=42)
 
-best_model = None
-best_recall = 0.0
-best_model_name = ""
+models = {
+    "Logistic Regression": lr_model,
+    "Random Forest": rf_model
+}
 
 print("\n--- Model Training & Benchmarking ---")
 for name, model in models.items():
@@ -65,11 +70,9 @@ for name, model in models.items():
     print(f"  Accuracy: {acc * 100:.2f}%")
     print(f"  Recall:   {rec * 100:.2f}%")
     print(f"  ROC-AUC:  {auc * 100:.2f}%")
-    
-    if rec > best_recall:
-        best_recall = rec
-        best_model = model
-        best_model_name = name
+
+# Primary deployment model: 100-tree Random Forest
+best_model = rf_model
 
 # 6. Save Model Artifacts
 os.makedirs("models", exist_ok=True)
@@ -77,4 +80,4 @@ joblib.dump(best_model, "models/heart_model.pkl")
 joblib.dump(scaler, "models/scaler.pkl")
 joblib.dump(list(X.columns), "models/feature_names.pkl")
 
-print(f"\nSaved primary model ({best_model_name}) and preprocessor to 'models/' successfully.")
+print(f"\nSaved primary model (Random Forest, 100 Trees) and preprocessor to 'models/' successfully.")

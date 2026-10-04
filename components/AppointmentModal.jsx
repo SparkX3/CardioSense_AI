@@ -125,7 +125,7 @@ export default function AppointmentModal({
                 <img
                   src={doctor.image}
                   alt={doctor.name}
-                  className="w-full h-full object-cover filter grayscale contrast-110"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
 
@@ -133,10 +133,10 @@ export default function AppointmentModal({
                 <h3 className="font-serif text-xl font-medium text-[#1C3326]">
                   {doctor.name}
                 </h3>
-                <p className="text-xs font-semibold text-[#1C3326]">{doctor.specialty}</p>
+                <p className="text-xs font-semibold text-[#1C3326]">{doctor.role || doctor.specialty}</p>
                 <p className="text-[11px] text-[#556358] flex items-center gap-1 mt-0.5">
                   <Building className="w-3 h-3 text-[#78827A]" />
-                  {doctor.hospital}
+                  {doctor.institution || doctor.hospital}
                 </p>
               </div>
             </div>

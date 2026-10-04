@@ -1,10 +1,10 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'CardioSense AI | Turning Science Into Medicine',
-  description: 'Proactive and preventative cardiovascular clinical intelligence platform powered by machine learning and 13 biomarkers.',
-  keywords: 'CardioSense AI, Cardiovascular Risk, Preventative Cardiology, Machine Learning Medicine',
-  authors: [{ name: 'CardioSense AI' }],
+  title: 'CardioSense AI | Predicting Risk Before It Matters',
+  description: 'Leveraging artificial intelligence and machine learning to predict cardiovascular risk, facilitate early intervention, and advance preventive healthcare.',
+  keywords: 'CardioSense AI, Cardiovascular Risk, Preventative Cardiology, Machine Learning Medicine, Sanchit Shingole, Lokmanya Tilak College of Engineering',
+  authors: [{ name: 'Sanchit Shingole' }],
 };
 
 export const viewport = {
